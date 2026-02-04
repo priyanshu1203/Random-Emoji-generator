@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Generator</title>
+
+</head>
+<style>
+    body {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        text-align: center;
+        margin-top: 50px;
+        background: #f0f0f0;
+    }
+
+    #generate-btn {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        background-color: #ee00ff;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+    }
+
+    #generate-btn:hover {
+        background-color: #00b380;
+    }
+</style>
+<body>
+    <h1>Random Emoji Generator</h1>
+    <button id="generate-btn">Generate Emoji</button>
+    <div id="emoji-display" style="font-size: 100px; margin-top: 20px;"></div>
+    <script>
+        const emojis = ['😀', '😂', '😍', '🤔', '😎', '😭', '😡', '👍', '🎉', '💔', '🚀', '⭐', '🌈', '🎁', '🍕', '🍔', '🎮', '📱', '💻', '🏆', '😴', '🤗', '😤', '🥳', '😈', '👿', '🤩', '😇', '🥰', '😘', '😚', '😙', '🥺', '😣', '😩', '🤬'];
+
+        const generateBtn = document.getElementById('generate-btn');
+        const emojiDisplay = document.getElementById('emoji-display');
+
+        generateBtn.addEventListener('click', () => {
+            const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+            emojiDisplay.textContent = randomEmoji;
+        });
+    </script>
+</body>
+</html>
